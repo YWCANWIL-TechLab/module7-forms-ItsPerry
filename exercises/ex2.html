@@ -19,32 +19,32 @@
             <a href="../index.html">Home</a>
         </header>
         <section id="questions" class="container">
-            <p>
+            <p style="color:green">
                 In the section with an id of answers, create a form with an id and name of form1. Ask the user 
                 for their first and last name using text inputs. The first name should have a default value of 
                 "John" and the last name should have a default value of "Doe". You can create this using the 
                 value attribute.
             </p>
-            <p>
+            <p style="color:green">
                 In the section with an id of answers, create a form with an id and name of form2. Ask the user 
                 for their first and last name using text inputs. You should also have a text field for a middle
                 name, but disable it with the disabled attribute.
             </p>
-            <p>
+            <p style="color:green">
                 In the section with an id of answers, create a form with an id and name of form3. Ask the user
                 to enter a username with a text input. You should also have a password input, but it should use 
                 the readonly attribute.
             </p>
-            <p>
+            <p style="color:green">
                 In the section with an id of answers, create a form with an id and name of form4. Ask the user
                 for a review using a textarea element. Make sure the textarea is at least 50 characters wide.
                 Include a reset input as well.
             </p>
-            <p>
+            <p style="color:green">
                 In the section with an id of answers, create a form with an id and name of form5. Ask the user
                 to leave another review using a textarea element. This time, give the max length of 100 characters.
             </p>
-            <p>
+            <p style="color:lightskyblue"><!--Had trouble understanding the Min and Max values-->
                 In the section with an id of answers, create a form with an id and name of form6. Ask the user 
                 for any date that happened during the Covid-19 Pandemic. The US considered it an emergency from 
                 Jan 31, 2020 to May 11, 2023. Using the min and max attributes, restrict the user's choices to 
@@ -84,6 +84,60 @@
             </p>
         </section>
         <section id="answers" class="container">
+            <p>Name</p>
+            <form id="form1">
+                <!--First & Last Name, Text Input-->
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" value="John"><br>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" value="Doe">
+            </form>
+
+            <p>Full Name</p>
+            <form id="form2">
+                <!--Full Name, Disabled Attribute-->
+                <label for="firstname2">First Name:</label>
+                <input type="text" id="firstname2" name="firstname2"><br>
+                <label for="middlename">Middle Name:</label>
+                <input type="text" id="middlename" name="middlename" disabled><br>
+                <label for="lastname2">Last Name:</label>
+                <input type="text" id="lastname2" name="lastname2">
+            </form>
+
+            <p>Login</p>
+            <form id="form3">
+                <!--User/Password, Readonly Attribute-->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" readonly>
+            </form>
+
+            <p>User Review</p>
+            <form id="form4">
+                <!--Textarea Element, Reset Input-->
+                <label for="review">Leave A Review:</label><br>
+                <textarea name="review" rows="10" cols="40" maxlength="50">
+                Leave a Review
+                </textarea>
+                <input type="reset">
+            </form>
+
+            <p>Big Review</p>
+            <form id="form5">
+                <!--Textarea Element-->
+                <label for="bigreview">Leave A Review:</label><br>
+                <textarea name="bigreview" rows="10" cols="40" maxlength="100">
+                Leave a Larger Review
+                </textarea>
+            </form>
+
+            <p>COVID Dates</p>
+            <form id="form6">
+                <!--COVID Date, Month Input-->
+                <label for="monthcovid">Select Covid-19 Vaccination Date & Time:</label>
+                <input type="month" id="monthcovid" name="monthcovid" min="Jan 31 2020" max="May 11 2023">
+            </form>
 
         </section>
         <script src="" async defer></script>
